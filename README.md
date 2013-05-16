@@ -1,0 +1,4 @@
+encapsulador
+============
+
+Encapsulador
