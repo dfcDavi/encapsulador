@@ -1,6 +1,6 @@
 <h1>Encapsulador</h1>
 
-<p>Este pacote desenvolvido em JAVA encapsula todas as funcionalidades de mural da api do Redu  e abstraem detalhes de rede na comunicação.</p>
+<p>Este pacote desenvolvido em JAVA encapsula todas as funcionalidades de mural da api do Redu  e abstrai detalhes de rede na comunicação.</p>
 
 <h2>Um breve começo</h2>
 
@@ -10,7 +10,7 @@
 Management management = new Management("yourconsumerkey", "yoursecretkey");
 ```
 
-<p>Adquira o seu authpin e inicie o cliente.</p>
+<p>Adquira o seu pin de autenticação e inicie o cliente.</p>
 
 ```java
 Scanner in = new Scanner(System.in);
@@ -33,6 +33,9 @@ Só é preciso pedir o pin uma vez por usuário, depois de adquirido basta inici
 ```java
 Management management = new Management("yourconsumerkey", "yoursecretkey", "yourpin");
 ```
+
+<p>Uma vez que tenha em mãos o objeto de manipulação (management), você está pronto pra utilizar todas as funcionalidades
+que este encapsulador lhe proporciona, através de chamada aos métodos desejados.</p>
 
 <h2>Como contribuir</h2>
 
