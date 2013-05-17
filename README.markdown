@@ -2,7 +2,7 @@
 
 <p>Este pacote desenvolvido em JAVA encapsula todas as funcionalidades de mural da api do Redu  e abstraem detalhes de rede na comunicação.</p>
 
-<h2>Iniciando...</h2>
+<h2>Um breve começo</h2>
 
 <p>Inicie criando um novo objeto management, fornecendo seu consumer token e secret token:.</p>
 
