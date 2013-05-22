@@ -39,10 +39,11 @@ que este encapsulador lhe proporciona, através de chamada aos métodos desejado
 
 <h2>Como contribuir</h2>
 
-<p>1-Implementar este encapsulador em outras linguagens de programação e disponibilizar no github.com;</p>
-<p>2-Dar commit em possíveis melhorias encontradas para este encapsulador;</p>
-<p>3-Realizar testes apurados para todas as funcionalidades de mural;</p>
-<p>4-Extender o encapsulador para outras funcionalidades.</p>
+1. Faça fork do projeto
+2. Crie um novo branch (`git checkout -b my-new-feature`)
+3. Realize seus commits (`git commit -am 'Add some feature'`)
+4. Dê push nas modificações (`git push origin my-new-feature`)
+5. Envie um pull request
 
 <h2>Copyright</h2>
 
