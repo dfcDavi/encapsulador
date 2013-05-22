@@ -34,8 +34,32 @@ Só é preciso pedir o pin uma vez por usuário, depois de adquirido basta inici
 Management management = new Management("yourconsumerkey", "yoursecretkey", "yourpin");
 ```
 
+<h2>Alguns exemplos de uso das funcionalidades</h2>
+
 <p>Uma vez que tenha em mãos o objeto de manipulação (management), você está pronto pra utilizar todas as funcionalidades
 que este encapsulador lhe proporciona, através de chamada aos métodos desejados.</p>
+
+<p>Abaixo segue um exemplo de como listar todos os status de um espaço. Atente ao fato de que é possível passar argumentos opcionais como Null.</p>
+
+```java
+List<Status> wall = management.getStatusesBySpace("id da disciplina que voce possua acesso", "Log", null);
+  	for(Status post : wall){
+			System.out.println(post);
+		}
+```
+<p>Criando um post no mural do usuário.</p>
+
+```java
+Status post = management.postStatusUser("id do usuário em questão", "Conteúdo do status");
+  System.out.println(post);
+```
+
+<p>Respondendo um post.</p>
+
+```java
+Status answer = management.postAnswer("id do status em questão (somente do tipo Activity ou Help)", "Resposta ao comentário ou pedido de ajuda");
+  System.out.println(answer);
+```
 
 <h2>Como contribuir</h2>
 
