@@ -74,6 +74,9 @@ public class ImplementedHttpClient extends HttpClient {
 
 	@Override
 	public String get(String url, Map.Entry<String, String>... params) {
+
+		Response r = null;
+
 		try{
 
 			OAuthRequest request = new OAuthRequest(Verb.GET, url);
@@ -81,17 +84,18 @@ public class ImplementedHttpClient extends HttpClient {
 				this.addUrlParams(request, params);
 			}
 			this.service.signRequest(this.accessToken, request);
-			Response r = request.send();
-
-			return r.getBody();
+			r = request.send();
 
 		}catch(Exception e){
-			throw e; //Não foi possível realizar o método get com sucesso.
+			e.printStackTrace();
 		}
+		return r.getBody();
 	}
 
 	@Override
 	public String post(String url, Map.Entry<String, String>... params) {
+
+		Response r = null;
 
 		try{
 
@@ -100,17 +104,18 @@ public class ImplementedHttpClient extends HttpClient {
 				this.addBodyParams(request, params);
 			}
 			this.service.signRequest(this.accessToken, request);
-			Response r = request.send();
-
-			return r.getBody();  //To change body of implemented methods use File | Settings | File Templates.
+			r = request.send();
 
 		}catch(Exception e){
-			throw e;
+			e.printStackTrace();
 		}
+		return r.getBody();  
 	}
 
 	@Override
 	public String post(String url, byte[] payload, Map.Entry<String, String>... params) {
+
+		Response r = null;
 
 		try{
 
@@ -123,12 +128,12 @@ public class ImplementedHttpClient extends HttpClient {
 
 			request.addHeader("Content-Type", "application/json");
 			this.service.signRequest(this.accessToken, request);
-			Response r = request.send();
-			return r.getBody();
+			r = request.send();
 
 		}catch(Exception e){
-			throw e;
+			e.printStackTrace();
 		}
+		return r.getBody();
 	}
 
 	@Override
