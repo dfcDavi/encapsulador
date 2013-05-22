@@ -160,7 +160,7 @@ public class Management<T> implements ReduInterface<T> {
 	public List<T> getStatusesTimelineBySpace(String spaceId, String type,
 			String page) {
 		Map.Entry<String, String> arg = new PairKeyAndValue("type", type);
-		Map.Entry<String, String> arg1 = new PairKeyAndValue("page", type);
+		Map.Entry<String, String> arg1 = new PairKeyAndValue("page", page);
 		return this.getUrl(BASE_URL+"spaces/"+spaceId+"/statuses/timeline", this.statusList, arg, arg1);
 	}
 
@@ -175,7 +175,7 @@ public class Management<T> implements ReduInterface<T> {
 	@Override
 	public List<T> getStatusesBySpace(String spaceId, String type, String page) {
 		Map.Entry<String, String> arg = new PairKeyAndValue("type", type);
-		Map.Entry<String, String> arg1 = new PairKeyAndValue("page", type);
+		Map.Entry<String, String> arg1 = new PairKeyAndValue("page", page);
 		return this.getUrl(BASE_URL+"spaces/"+spaceId+"/statuses", this.statusList, arg, arg1);
 	}
 
